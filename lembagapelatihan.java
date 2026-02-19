@@ -1,28 +1,61 @@
-public class lembagapelatihan {
-    int idLembaga;
-    String namaLembaga;
-    String jenisLembaga;
-    String kontakEmail;
+public class LembagaPelatihan {
+    private int idLembaga;
+    private String namaLembaga;
+    private String jenisLembaga;
+    private String kontakEmail;
 
-    public void mengisiData(int id, String nama, String jenis, String email) {
-        idLembaga = id;
-        namaLembaga = nama;
-        jenisLembaga = jenis;
-        kontakEmail = email;
+    public LembagaPelatihan(int idLembaga, String namaLembaga, String jenisLembaga, String kontakEmail) {
+        this.idLembaga = idLembaga;
+        this.namaLembaga = namaLembaga;
+        this.jenisLembaga = jenisLembaga;
+        this.kontakEmail = kontakEmail;
     }
+
+    public int getIdLembaga() {
+        return idLembaga;
+    }
+
+    public String getNamaLembaga() {
+        return namaLembaga;
+    }
+
+    public String getJenisLembaga() {
+        return jenisLembaga;
+    }
+
+    public String getKontakEmail() {
+        return kontakEmail;
+    }
+
+    public void setNamaLembaga(String namaLembaga) {
+        this.namaLembaga = namaLembaga;
+    }
+
+    public void setJenisLembaga(String jenisLembaga) {
+        this.jenisLembaga = jenisLembaga;
+    }
+
+    public void setKontakEmail(String kontakEmail) {
+        this.kontakEmail = kontakEmail;
+    }
+
     public void tampilkanData() {
-        System.out.println("ID: " + idLembaga);
-        System.out.println("Nama: " + namaLembaga);
-        System.out.println("Jenis: " + jenisLembaga);
-        System.out.println("Email: " + kontakEmail);
+        System.out.println("ID Lembaga   : " + idLembaga);
+        System.out.println("Nama Lembaga : " + namaLembaga);
+        System.out.println("Jenis        : " + jenisLembaga);
+        System.out.println("Email        : " + kontakEmail);
     }
+
     public static void main(String[] args) {
-        lembagapelatihan lp = new lembagapelatihan();
-        lp.mengisiData(12, "Lembaga Coding", "IT", "infocoding@gmail.com");
+        LembagaPelatihan lp = new LembagaPelatihan(
+                12,
+                "Lembaga Coding",
+                "IT",
+                "infocoding@gmail.com"
+        );
         lp.tampilkanData();
     }
 }
-
 
     
 
